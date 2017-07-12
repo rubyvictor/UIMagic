@@ -12,6 +12,12 @@
 		B15BAD861F16271F00D5469C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD841F16271F00D5469C /* Main.storyboard */; };
 		B15BAD881F16271F00D5469C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD871F16271F00D5469C /* Assets.xcassets */; };
 		B15BAD8B1F16271F00D5469C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD891F16271F00D5469C /* LaunchScreen.storyboard */; };
+		B15BAD961F16288E00D5469C /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD951F16288E00D5469C /* InspirationsViewController.swift */; };
+		B15BAD991F162C8D00D5469C /* UIColor+palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD981F162C8D00D5469C /* UIColor+palette.swift */; };
+		B15BAD9B1F162E8D00D5469C /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD9A1F162E8D00D5469C /* Inspirations.plist */; };
+		B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */; };
+		B15BADA01F1632C200D5469C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9F1F1632C200D5469C /* Session.swift */; };
+		B15BADA21F1636CE00D5469C /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA11F1636CE00D5469C /* Inspiration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		B15BAD871F16271F00D5469C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15BAD8A1F16271F00D5469C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B15BAD8C1F16272000D5469C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B15BAD951F16288E00D5469C /* InspirationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
+		B15BAD981F162C8D00D5469C /* UIColor+palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+palette.swift"; sourceTree = "<group>"; };
+		B15BAD9A1F162E8D00D5469C /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
+		B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+decompression.swift"; sourceTree = "<group>"; };
+		B15BAD9F1F1632C200D5469C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B15BADA11F1636CE00D5469C /* Inspiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspiration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,60 @@
 		B15BAD7F1F16271F00D5469C /* UIMagic */ = {
 			isa = PBXGroup;
 			children = (
+				B15BAD9C1F162E9E00D5469C /* Asset */,
+				B15BAD971F162C5200D5469C /* Utils */,
+				B15BAD941F16286A00D5469C /* Model */,
+				B15BAD931F16286300D5469C /* View */,
+				B15BAD921F16285700D5469C /* Controller */,
 				B15BAD801F16271F00D5469C /* AppDelegate.swift */,
 				B15BAD821F16271F00D5469C /* ViewController.swift */,
 				B15BAD841F16271F00D5469C /* Main.storyboard */,
-				B15BAD871F16271F00D5469C /* Assets.xcassets */,
 				B15BAD891F16271F00D5469C /* LaunchScreen.storyboard */,
 				B15BAD8C1F16272000D5469C /* Info.plist */,
 			);
 			path = UIMagic;
+			sourceTree = "<group>";
+		};
+		B15BAD921F16285700D5469C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B15BAD951F16288E00D5469C /* InspirationsViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B15BAD931F16286300D5469C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B15BAD941F16286A00D5469C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B15BAD9F1F1632C200D5469C /* Session.swift */,
+				B15BADA11F1636CE00D5469C /* Inspiration.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B15BAD971F162C5200D5469C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B15BAD981F162C8D00D5469C /* UIColor+palette.swift */,
+				B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		B15BAD9C1F162E9E00D5469C /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				B15BAD871F16271F00D5469C /* Assets.xcassets */,
+				B15BAD9A1F162E8D00D5469C /* Inspirations.plist */,
+			);
+			name = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +185,7 @@
 				B15BAD8B1F16271F00D5469C /* LaunchScreen.storyboard in Resources */,
 				B15BAD881F16271F00D5469C /* Assets.xcassets in Resources */,
 				B15BAD861F16271F00D5469C /* Main.storyboard in Resources */,
+				B15BAD9B1F162E8D00D5469C /* Inspirations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15BAD961F16288E00D5469C /* InspirationsViewController.swift in Sources */,
+				B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */,
+				B15BADA01F1632C200D5469C /* Session.swift in Sources */,
 				B15BAD831F16271F00D5469C /* ViewController.swift in Sources */,
 				B15BAD811F16271F00D5469C /* AppDelegate.swift in Sources */,
+				B15BADA21F1636CE00D5469C /* Inspiration.swift in Sources */,
+				B15BAD991F162C8D00D5469C /* UIColor+palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
