@@ -13,7 +13,7 @@ class Inspiration: Session {
     static func LoadAllInspirations() -> [Inspiration] {
         
         var inspirations = [Inspiration]()
-        if let url = Bundle.main.url(forResource: "Inspirations", withExtension: ".plist") {
+        if let url = Bundle.main.url(forResource: "Inspirations", withExtension: "plist") {
             if let inspirationsFromPlist = NSArray(contentsOf: url) {
                 for dict in inspirationsFromPlist {
                     let inspiration = Inspiration(dictionary: dict as! NSDictionary)

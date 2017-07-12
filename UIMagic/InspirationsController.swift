@@ -11,9 +11,10 @@ import UIKit
 class InspirationsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let inspirations = Inspiration.LoadAllInspirations()
-    let color = UIColor.palette()
+    let colors = UIColor.palette()
     
     private let cellId = "cellId"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +28,14 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
     }
     
     
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return color.count
+        return inspirations.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
-        
+        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell
     }
