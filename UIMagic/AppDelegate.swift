@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let layout = UICollectionViewFlowLayout()
-        let inspirationsViewController = InspirationsViewController(collectionViewLayout: layout)
+        let inspirationsViewController = InspirationsController(collectionViewLayout: layout)
         window?.rootViewController = UINavigationController(rootViewController: inspirationsViewController)
         
         return true

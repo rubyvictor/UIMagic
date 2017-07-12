@@ -37,7 +37,7 @@ class Session {
         let time = dictionary["Time"] as? String ?? ""
         let backgroundName = dictionary["Background"] as? String ?? ""
         let backgroundImage = UIImage(named: backgroundName)
-        self.init(title: title, speaker: speaker, room: room, time: time, backgroundImage: backgroundImage!.decompressedImage)
+        self.init(title: title, speaker: speaker, room: room, time: time, backgroundImage: (backgroundImage?.decompressedImage)!)
     }
     
 }

@@ -12,13 +12,15 @@
 		B15BAD861F16271F00D5469C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD841F16271F00D5469C /* Main.storyboard */; };
 		B15BAD881F16271F00D5469C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD871F16271F00D5469C /* Assets.xcassets */; };
 		B15BAD8B1F16271F00D5469C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD891F16271F00D5469C /* LaunchScreen.storyboard */; };
-		B15BAD961F16288E00D5469C /* InspirationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD951F16288E00D5469C /* InspirationsViewController.swift */; };
+		B15BAD961F16288E00D5469C /* InspirationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD951F16288E00D5469C /* InspirationsController.swift */; };
 		B15BAD991F162C8D00D5469C /* UIColor+palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD981F162C8D00D5469C /* UIColor+palette.swift */; };
 		B15BAD9B1F162E8D00D5469C /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B15BAD9A1F162E8D00D5469C /* Inspirations.plist */; };
 		B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */; };
 		B15BADA01F1632C200D5469C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9F1F1632C200D5469C /* Session.swift */; };
 		B15BADA21F1636CE00D5469C /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA11F1636CE00D5469C /* Inspiration.swift */; };
 		B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA51F163B8700D5469C /* UIView+anchors.swift */; };
+		B15BADA81F163D0000D5469C /* InspirationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA71F163D0000D5469C /* InspirationsCell.swift */; };
+		B15BADAA1F1641D800D5469C /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15BADA91F1641D800D5469C /* Inspirations.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +31,15 @@
 		B15BAD871F16271F00D5469C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15BAD8A1F16271F00D5469C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B15BAD8C1F16272000D5469C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B15BAD951F16288E00D5469C /* InspirationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsViewController.swift; sourceTree = "<group>"; };
+		B15BAD951F16288E00D5469C /* InspirationsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsController.swift; sourceTree = "<group>"; };
 		B15BAD981F162C8D00D5469C /* UIColor+palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+palette.swift"; sourceTree = "<group>"; };
 		B15BAD9A1F162E8D00D5469C /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
 		B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+decompression.swift"; sourceTree = "<group>"; };
 		B15BAD9F1F1632C200D5469C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B15BADA11F1636CE00D5469C /* Inspiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspiration.swift; sourceTree = "<group>"; };
 		B15BADA51F163B8700D5469C /* UIView+anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchors.swift"; sourceTree = "<group>"; };
+		B15BADA71F163D0000D5469C /* InspirationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsCell.swift; sourceTree = "<group>"; };
+		B15BADA91F1641D800D5469C /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,7 @@
 		B15BAD921F16285700D5469C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B15BAD951F16288E00D5469C /* InspirationsViewController.swift */,
+				B15BAD951F16288E00D5469C /* InspirationsController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -93,6 +97,7 @@
 		B15BAD931F16286300D5469C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B15BADA71F163D0000D5469C /* InspirationsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		B15BAD9C1F162E9E00D5469C /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				B15BADA91F1641D800D5469C /* Inspirations.xcassets */,
 				B15BAD871F16271F00D5469C /* Assets.xcassets */,
 				B15BAD9A1F162E8D00D5469C /* Inspirations.plist */,
 			);
@@ -188,6 +194,7 @@
 				B15BAD8B1F16271F00D5469C /* LaunchScreen.storyboard in Resources */,
 				B15BAD881F16271F00D5469C /* Assets.xcassets in Resources */,
 				B15BAD861F16271F00D5469C /* Main.storyboard in Resources */,
+				B15BADAA1F1641D800D5469C /* Inspirations.xcassets in Resources */,
 				B15BAD9B1F162E8D00D5469C /* Inspirations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,12 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15BAD961F16288E00D5469C /* InspirationsViewController.swift in Sources */,
+				B15BAD961F16288E00D5469C /* InspirationsController.swift in Sources */,
 				B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */,
 				B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */,
 				B15BADA01F1632C200D5469C /* Session.swift in Sources */,
 				B15BAD831F16271F00D5469C /* ViewController.swift in Sources */,
 				B15BAD811F16271F00D5469C /* AppDelegate.swift in Sources */,
+				B15BADA81F163D0000D5469C /* InspirationsCell.swift in Sources */,
 				B15BADA21F1636CE00D5469C /* Inspiration.swift in Sources */,
 				B15BAD991F162C8D00D5469C /* UIColor+palette.swift in Sources */,
 			);
