@@ -35,7 +35,9 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
-        cell.imageView.backgroundColor = colors[indexPath.item]
+        cell.inspirations = inspirations[indexPath.item]
+        
+//        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell
     }

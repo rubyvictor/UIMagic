@@ -26,9 +26,9 @@ class InspirationsCell: UICollectionViewCell, UICollectionViewDelegateFlowLayout
     
     var inspirations: Inspiration? {
         didSet {
-//            if let inspirations = inspirations {
-//                imageView.image = inspirations.backgroundImage
-//            }
+            if let inspirations = inspirations {
+                imageView.image = inspirations.backgroundImage
+            }
         }
         
     }

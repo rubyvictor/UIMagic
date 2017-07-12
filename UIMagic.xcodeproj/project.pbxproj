@@ -21,6 +21,7 @@
 		B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA51F163B8700D5469C /* UIView+anchors.swift */; };
 		B15BADA81F163D0000D5469C /* InspirationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA71F163D0000D5469C /* InspirationsCell.swift */; };
 		B15BADAA1F1641D800D5469C /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15BADA91F1641D800D5469C /* Inspirations.xcassets */; };
+		B15BADAC1F16646800D5469C /* UltraVisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADAB1F16646800D5469C /* UltraVisualLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B15BADA51F163B8700D5469C /* UIView+anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchors.swift"; sourceTree = "<group>"; };
 		B15BADA71F163D0000D5469C /* InspirationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationsCell.swift; sourceTree = "<group>"; };
 		B15BADA91F1641D800D5469C /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
+		B15BADAB1F16646800D5469C /* UltraVisualLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UltraVisualLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B15BADA71F163D0000D5469C /* InspirationsCell.swift */,
+				B15BADAB1F16646800D5469C /* UltraVisualLayout.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				B15BAD961F16288E00D5469C /* InspirationsController.swift in Sources */,
 				B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */,
+				B15BADAC1F16646800D5469C /* UltraVisualLayout.swift in Sources */,
 				B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */,
 				B15BADA01F1632C200D5469C /* Session.swift in Sources */,
 				B15BAD831F16271F00D5469C /* ViewController.swift in Sources */,
@@ -378,6 +382,7 @@
 				B15BAD911F16272000D5469C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
