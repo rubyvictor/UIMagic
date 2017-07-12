@@ -18,6 +18,7 @@
 		B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */; };
 		B15BADA01F1632C200D5469C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BAD9F1F1632C200D5469C /* Session.swift */; };
 		B15BADA21F1636CE00D5469C /* Inspiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA11F1636CE00D5469C /* Inspiration.swift */; };
+		B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15BADA51F163B8700D5469C /* UIView+anchors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+decompression.swift"; sourceTree = "<group>"; };
 		B15BAD9F1F1632C200D5469C /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B15BADA11F1636CE00D5469C /* Inspiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inspiration.swift; sourceTree = "<group>"; };
+		B15BADA51F163B8700D5469C /* UIView+anchors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+anchors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				B15BAD981F162C8D00D5469C /* UIColor+palette.swift */,
 				B15BAD9D1F1631B700D5469C /* UIImage+decompression.swift */,
+				B15BADA51F163B8700D5469C /* UIView+anchors.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15BAD961F16288E00D5469C /* InspirationsViewController.swift in Sources */,
+				B15BADA61F163B8700D5469C /* UIView+anchors.swift in Sources */,
 				B15BAD9E1F1631B700D5469C /* UIImage+decompression.swift in Sources */,
 				B15BADA01F1632C200D5469C /* Session.swift in Sources */,
 				B15BAD831F16271F00D5469C /* ViewController.swift in Sources */,
