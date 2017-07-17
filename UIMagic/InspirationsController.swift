@@ -22,7 +22,10 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
         collectionView?.backgroundColor = .clear
         collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         
-//        collectionView?.collectionViewLayout = UltravisualLayout()
+        
+        if let layout = collectionView?.collectionViewLayout as? UltravisualLayout {
+            layout.delegate = self
+        }
 
         
     }
@@ -48,8 +51,8 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
         
         
-//        cell.inspirations = inspirations[indexPath.item]
-        cell.contentView.backgroundColor = colors[indexPath.item]
+        cell.inspirations = inspirations[indexPath.item]
+//        cell.contentView.backgroundColor = colors[indexPath.item]
 //        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell
@@ -59,6 +62,13 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
 //        return CGSize(width: view.frame.width, height: 150)
 //    }
     
+}
+
+extension InspirationsController: UltraVisualDelegate {
+    func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, withWidth: CGFloat) -> CGFloat {
+        return 100
+        
+    }
 }
 
 

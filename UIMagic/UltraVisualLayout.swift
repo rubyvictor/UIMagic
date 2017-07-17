@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol UltraVisualDelegate {
+    
+    func collectionView(collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:NSIndexPath, withWidth:CGFloat) -> CGFloat
+    
+}
+
+
 /* The heights are declared as constants outside of the class so they can be easily referenced elsewhere */
 struct UltravisualLayoutConstants {
     struct Cell {
@@ -19,6 +26,8 @@ struct UltravisualLayoutConstants {
 }
 
 class UltravisualLayout: UICollectionViewLayout {
+    
+    var delegate: UltraVisualDelegate!
     
     
     // MARK: Properties and Variables
@@ -129,7 +138,11 @@ class UltravisualLayout: UICollectionViewLayout {
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        return layoutAttributesForItem(at: indexPath)
+        
+        return cache.first {
+            attributes -> Bool in
+            return attributes.indexPath == indexPath
+        }
     }
     
 }
