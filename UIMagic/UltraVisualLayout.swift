@@ -18,7 +18,7 @@ struct UltravisualLayoutConstants {
     }
 }
 
-class UltravisualLayout: UICollectionViewFlowLayout {
+class UltravisualLayout: UICollectionViewLayout {
     
     
     // MARK: Properties and Variables
@@ -128,7 +128,8 @@ class UltravisualLayout: UICollectionViewFlowLayout {
         return true
     }
     
-    
-    
+    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        return layoutAttributesForItem(at: indexPath)
+    }
     
 }

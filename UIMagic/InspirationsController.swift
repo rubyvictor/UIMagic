@@ -21,8 +21,16 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
         
         collectionView?.backgroundColor = .clear
         collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
-    }
+        
+//        collectionView?.collectionViewLayout = UltravisualLayout()
 
+        
+    }
+    
+    
+    
+    // Normal collectionViewFlowLayout
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0.5
     }
@@ -33,17 +41,24 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
         return inspirations.count
     }
     
+    
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
-        cell.inspirations = inspirations[indexPath.item]
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
+        
+        
+//        cell.inspirations = inspirations[indexPath.item]
+        cell.contentView.backgroundColor = colors[indexPath.item]
 //        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: view.frame.width, height: 150)
+//    }
     
 }
+
+
