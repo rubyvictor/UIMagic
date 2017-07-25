@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13D9CAD1F1DE4BF006FEC1E /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B15BADAB1F16646800D5469C /* UltraVisualLayout.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		B15BAD741F16271F00D5469C = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +82,7 @@
 		B15BAD7F1F16271F00D5469C /* UIMagic */ = {
 			isa = PBXGroup;
 			children = (
+				B13D9CAD1F1DE4BF006FEC1E /* Layout */,
 				B15BAD9C1F162E9E00D5469C /* Asset */,
 				B15BAD971F162C5200D5469C /* Utils */,
 				B15BAD941F16286A00D5469C /* Model */,
@@ -100,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				B15BADA71F163D0000D5469C /* InspirationsCell.swift */,
-				B15BADAB1F16646800D5469C /* UltraVisualLayout.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";

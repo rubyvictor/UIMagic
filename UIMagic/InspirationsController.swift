@@ -7,38 +7,43 @@
 //
 
 import UIKit
+import AVFoundation
 
-class InspirationsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class InspirationsController: UICollectionViewController  {
+    
+
     
     let inspirations = Inspiration.LoadAllInspirations()
     let colors = UIColor.palette()
     
-    private let cellId = "cellId"
+//    private let cellId = "cellId"
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = .clear
-        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
-        
-        
-        if let layout = collectionView?.collectionViewLayout as? UltravisualLayout {
-            layout.delegate = self
-        }
+        collectionView?.backgroundColor = .white
 
+        //        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         
+        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        layout.itemSize = CGSize(width: view.frame.width, height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.minimumLineSpacing = 0
+        
+//        if let layout = collectionView?.collectionViewLayout as? UltravisualLayout {
+//            layout.delegate = self
+//        }
     }
     
     
     
-    // Normal collectionViewFlowLayout
+    // Normal collectionView Cells
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.5
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
-    
-    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return inspirations.count
@@ -48,27 +53,22 @@ class InspirationsController: UICollectionViewController, UICollectionViewDelega
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! InspirationsCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inspirationsCell", for: indexPath)
         
-        
-        cell.inspirations = inspirations[indexPath.item]
-//        cell.contentView.backgroundColor = colors[indexPath.item]
+//        cell.inspirations = inspirations[indexPath.item]
+        cell.contentView.backgroundColor = colors[indexPath.item]
 //        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell
     }
     
+    
+    
+    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 //        return CGSize(width: view.frame.width, height: 150)
 //    }
     
-}
-
-extension InspirationsController: UltraVisualDelegate {
-    func collectionView(collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: NSIndexPath, withWidth: CGFloat) -> CGFloat {
-        return 100
-        
-    }
 }
 
 
