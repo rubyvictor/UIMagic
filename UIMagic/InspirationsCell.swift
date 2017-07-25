@@ -82,6 +82,11 @@ class InspirationsCell: UICollectionViewCell {
         
         // 4
         imageCoverView.backgroundColor = .black
+        
+        // 5
+        let scale = max(delta, 0.5)
+        inspirationLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
     }
     
     
