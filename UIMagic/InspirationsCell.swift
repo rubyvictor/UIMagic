@@ -15,20 +15,9 @@ class InspirationsCell: UICollectionViewCell {
     
     @IBOutlet var imageCoverView: UIView!
     @IBOutlet var inspirationLabel: UILabel!
+    @IBOutlet var timeAndRoomLabel: UILabel!
     
-//    let imageView: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.backgroundColor = .red
-//        imageView.layer.masksToBounds = true
-//      return imageView
-//    }()
-//    
-//    let imageCoverView: UIView = {
-//       let icv = UIView()
-//        icv.backgroundColor = .black
-//        return icv
-//    }()
+    @IBOutlet weak var speakerLabel: UILabel!
     
     
     var inspirations: Inspiration? {
@@ -44,26 +33,19 @@ class InspirationsCell: UICollectionViewCell {
                     inspirationLabel.attributedText = attributedText
                 }
                 inspirationLabel.textColor = .white
+                
+                if let font = UIFont(name: "Avenir Next Medium", size: 17) {
+                    let string = inspirations.roomAndTime
+                    let attributedText = NSAttributedString(string: string, attributes: [NSFontAttributeName: font])
+                    timeAndRoomLabel.attributedText = attributedText
+                }
+                timeAndRoomLabel.textColor = .white
+                timeAndRoomLabel.textAlignment = .center
             }
         }
         
     }
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        
-//        backgroundColor = .yellow
-//        
-//        addSubview(imageView)
-//        addSubview(imageCoverView)
-//        
-//        imageView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-//        imageCoverView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
@@ -86,6 +68,9 @@ class InspirationsCell: UICollectionViewCell {
         // 5
         let scale = max(delta, 0.5)
         inspirationLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
+        // 6
+        timeAndRoomLabel.alpha = delta
         
     }
     
