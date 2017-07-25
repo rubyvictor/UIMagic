@@ -114,7 +114,7 @@ class UltravisualLayout: UICollectionViewLayout {
     }
     
     /* Return all attributes in the cache whose frame intersects with the rect passed to the method */
-    func layoutAttributesForElements(in rect: CGRect) -> [AnyObject]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         for attributes in cache {
             if attributes.frame.intersects(rect) {

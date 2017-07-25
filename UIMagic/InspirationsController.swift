@@ -25,18 +25,16 @@ class InspirationsController: UICollectionViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = .white
+        collectionView?.backgroundColor = .clear
 
         //        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         
-        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        layout.itemSize = CGSize(width: view.frame.width, height: 100)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.minimumLineSpacing = 0
+//        guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else { return }
+//        layout.itemSize = CGSize(width: view.frame.width, height: 100)
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        layout.minimumLineSpacing = 0
         
-//        if let layout = collectionView?.collectionViewLayout as? UltravisualLayout {
-//            layout.delegate = self
-//        }
+
     }
     
     
