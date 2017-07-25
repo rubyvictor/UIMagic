@@ -41,6 +41,14 @@ class InspirationsCell: UICollectionViewCell {
                 }
                 timeAndRoomLabel.textColor = .white
                 timeAndRoomLabel.textAlignment = .center
+                
+                if let font = UIFont(name: "Avenir Next Medium", size: 17) {
+                    let string = inspirations.speaker
+                    let attributedText = NSAttributedString(string: string, attributes: [NSFontAttributeName: font])
+                    speakerLabel.attributedText = attributedText
+                    speakerLabel.textColor = .white
+                    speakerLabel.textAlignment = .center
+                }
             }
         }
         
@@ -71,7 +79,7 @@ class InspirationsCell: UICollectionViewCell {
         
         // 6
         timeAndRoomLabel.alpha = delta
-        
+        speakerLabel.alpha = delta
     }
     
     

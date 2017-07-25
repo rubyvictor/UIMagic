@@ -51,9 +51,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-fp-odw">
-                                            <rect key="frame" x="78.5" y="89" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-fp-odw">
+                                            <rect key="frame" x="0.0" y="143" width="200" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -63,8 +62,10 @@
                                 <constraints>
                                     <constraint firstItem="KxM-B4-nyA" firstAttribute="top" secondItem="00d-Zh-g83" secondAttribute="bottom" id="C1G-Bt-cwG"/>
                                     <constraint firstAttribute="trailing" secondItem="SNg-gR-y6e" secondAttribute="trailing" id="Dhj-QB-Ukw"/>
+                                    <constraint firstItem="RB8-fp-odw" firstAttribute="top" secondItem="KxM-B4-nyA" secondAttribute="bottom" id="IqC-NA-VaD"/>
                                     <constraint firstItem="00d-Zh-g83" firstAttribute="centerY" secondItem="Q6M-oC-TnT" secondAttribute="centerY" id="L0E-C2-JNj"/>
                                     <constraint firstAttribute="bottom" secondItem="SNg-gR-y6e" secondAttribute="bottom" id="LFQ-0m-UDZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RB8-fp-odw" secondAttribute="trailing" id="Lqu-Xl-KVx"/>
                                     <constraint firstAttribute="trailing" secondItem="Ibw-Ih-5bF" secondAttribute="trailing" id="SFv-Af-ChI"/>
                                     <constraint firstItem="00d-Zh-g83" firstAttribute="leading" secondItem="Q6M-oC-TnT" secondAttribute="leading" id="Vaq-Mo-wmh"/>
                                     <constraint firstItem="KxM-B4-nyA" firstAttribute="leading" secondItem="Q6M-oC-TnT" secondAttribute="leading" id="Vop-xf-bSG"/>
@@ -74,6 +75,7 @@
                                     <constraint firstItem="Ibw-Ih-5bF" firstAttribute="leading" secondItem="Q6M-oC-TnT" secondAttribute="leading" id="g6g-Dg-y2i"/>
                                     <constraint firstAttribute="trailing" secondItem="KxM-B4-nyA" secondAttribute="trailing" id="l8A-MI-fKS"/>
                                     <constraint firstItem="Ibw-Ih-5bF" firstAttribute="centerY" secondItem="Q6M-oC-TnT" secondAttribute="centerY" id="oRC-TF-6rn"/>
+                                    <constraint firstItem="RB8-fp-odw" firstAttribute="leading" secondItem="Q6M-oC-TnT" secondAttribute="leading" id="tB2-vJ-mdT"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
