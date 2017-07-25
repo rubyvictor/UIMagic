@@ -114,6 +114,15 @@ class UltravisualLayout: UICollectionViewLayout {
     }
     
     /* Return all attributes in the cache whose frame intersects with the rect passed to the method */
+    
+    // This method snaps the featured cell right to the top of the screen without scrolling with too much effort. Also needs to speed up deceleration in View Controller
+    
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        let itemIndex = round(proposedContentOffset.y / dragOffset)
+        let yOffset = itemIndex * dragOffset
+        return CGPoint(x: 0, y: yOffset)
+    }
+    
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         for attributes in cache {

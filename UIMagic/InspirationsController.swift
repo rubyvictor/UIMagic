@@ -26,6 +26,7 @@ class InspirationsController: UICollectionViewController  {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .clear
+        collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
 
         //        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         
