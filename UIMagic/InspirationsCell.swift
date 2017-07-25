@@ -14,6 +14,7 @@ class InspirationsCell: UICollectionViewCell {
     @IBOutlet var imageView: UIImageView!
     
     @IBOutlet var imageCoverView: UIView!
+    @IBOutlet var inspirationLabel: UILabel!
     
 //    let imageView: UIImageView = {
 //        let imageView = UIImageView()
@@ -35,6 +36,14 @@ class InspirationsCell: UICollectionViewCell {
             if let inspirations = inspirations {
                 imageView.image = inspirations.backgroundImage
                 imageView.contentMode = .scaleAspectFill
+    
+                inspirationLabel.textAlignment = .center
+                if let font = UIFont(name: "Avenir Next Demi Bold", size: 38) {
+                    let string = inspirations.title
+                    let attributedText = NSAttributedString(string: string, attributes: [NSFontAttributeName: font])
+                    inspirationLabel.attributedText = attributedText
+                }
+                inspirationLabel.textColor = .white
             }
         }
         
