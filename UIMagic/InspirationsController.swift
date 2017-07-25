@@ -12,6 +12,9 @@ import AVFoundation
 class InspirationsController: UICollectionViewController  {
     
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     let inspirations = Inspiration.LoadAllInspirations()
     let colors = UIColor.palette()
@@ -53,10 +56,10 @@ class InspirationsController: UICollectionViewController  {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inspirationsCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inspirationsCell", for: indexPath) as! InspirationsCell
         
-//        cell.inspirations = inspirations[indexPath.item]
-        cell.contentView.backgroundColor = colors[indexPath.item]
+        cell.inspirations = inspirations[indexPath.item]
+//        cell.contentView.backgroundColor = colors[indexPath.item]
 //        cell.imageView.backgroundColor = colors[indexPath.item]
         
         return cell

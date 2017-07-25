@@ -24,20 +24,34 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inspirationsCell" id="Q6M-oC-TnT">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="inspirationsCell" id="Q6M-oC-TnT" customClass="InspirationsCell" customModule="UIMagic" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ibw-Ih-5bF">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Ibw-Ih-5bF" firstAttribute="top" secondItem="Q6M-oC-TnT" secondAttribute="top" id="8sg-YD-vzJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ibw-Ih-5bF" secondAttribute="trailing" id="SFv-Af-ChI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ibw-Ih-5bF" secondAttribute="bottom" id="X7M-QV-XCU"/>
+                                    <constraint firstItem="Ibw-Ih-5bF" firstAttribute="leading" secondItem="Q6M-oC-TnT" secondAttribute="leading" id="g6g-Dg-y2i"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Ibw-Ih-5bF" id="OMk-yA-xqC"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="111.99400299850076"/>
+            <point key="canvasLocation" x="-223" y="-148"/>
         </scene>
     </scenes>
 </document>

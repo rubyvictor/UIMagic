@@ -11,6 +11,8 @@ import UIKit
 class InspirationsCell: UICollectionViewCell {
     
 
+    @IBOutlet var imageView: UIImageView!
+    
     
 //    let imageView: UIImageView = {
 //        let imageView = UIImageView()
@@ -27,14 +29,15 @@ class InspirationsCell: UICollectionViewCell {
 //    }()
     
     
-//    var inspirations: Inspiration? {
-//        didSet {
-//            if let inspirations = inspirations {
-//                imageView.image = inspirations.backgroundImage
-//            }
-//        }
-//        
-//    }
+    var inspirations: Inspiration? {
+        didSet {
+            if let inspirations = inspirations {
+                imageView.image = inspirations.backgroundImage
+                imageView.contentMode = .scaleAspectFill
+            }
+        }
+        
+    }
     
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
