@@ -13,6 +13,7 @@ class InspirationsCell: UICollectionViewCell {
 
     @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var imageCoverView: UIView!
     
 //    let imageView: UIImageView = {
 //        let imageView = UIImageView()
@@ -55,21 +56,24 @@ class InspirationsCell: UICollectionViewCell {
 //        fatalError("init(coder:) has not been implemented")
 //    }
     
-//    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
-//        super.apply(layoutAttributes)
-//        
-//        // 1
-//        let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
-//        let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
-//        
-//        // 2
-//        let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
-//        
-//        // 3
-//        let minAlpha: CGFloat = 0.3
-//        let maxAlpha: CGFloat = 0.75
-//        imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-//    }
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        
+        // 1
+        let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
+        let featuredHeight = UltravisualLayoutConstants.Cell.featuredHeight
+        
+        // 2
+        let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
+        
+        // 3
+        let minAlpha: CGFloat = 0.3
+        let maxAlpha: CGFloat = 0.75
+        imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+        
+        // 4
+        imageCoverView.backgroundColor = .black
+    }
     
     
 }
