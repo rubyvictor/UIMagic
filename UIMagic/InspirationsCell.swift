@@ -93,7 +93,7 @@ class InspirationsCell: UICollectionViewCell {
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let offsetFromCenter = CGPoint(x: center.x - self.center.x, y: center.y - self.center.y)
         let maxVerticalOffset = (bounds.height / 2) + (self.bounds.height / 2)
-        let scaleFactor = 10 - maxVerticalOffset
+        let scaleFactor = 40 - maxVerticalOffset
         parallaxOffset = -offsetFromCenter.y * scaleFactor
         
     }
