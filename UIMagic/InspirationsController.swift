@@ -27,6 +27,7 @@ class InspirationsController: UICollectionViewController  {
         
         collectionView?.backgroundColor = .clear
         collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
+        collectionView?.contentInset = UIEdgeInsets(top: 60, left: 15, bottom: 50, right: 80)
 
         //        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         
@@ -41,7 +42,6 @@ class InspirationsController: UICollectionViewController  {
     
     
     // Normal collectionView Cells
-    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
