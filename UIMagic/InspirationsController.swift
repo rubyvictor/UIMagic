@@ -27,7 +27,7 @@ class InspirationsController: UICollectionViewController  {
         
         collectionView?.backgroundColor = .clear
         collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
-        collectionView?.contentInset = UIEdgeInsets(top: 60, left: 15, bottom: 50, right: 80)
+        collectionView?.contentInset = UIEdgeInsets(top: 60, left: 15, bottom: 50, right: 15)
 
         //        collectionView?.register(InspirationsCell.self, forCellWithReuseIdentifier: cellId)
         

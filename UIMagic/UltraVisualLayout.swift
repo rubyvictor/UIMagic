@@ -133,13 +133,17 @@ class UltravisualLayout: UICollectionViewLayout {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         for attributes in cache {
             if attributes.frame.intersects(rect) {
+                attributes.frame.insetBy(dx: 12, dy: 0)
+                attributes.frame.offsetBy(dx: 8, dy: 8)
+                attributes.transform = CGAffineTransform(rotationAngle: 270)
+                
                 layoutAttributes.append(attributes)
             }
             
-            for attributes in layoutAttributes {
-                attributes.frame.insetBy(dx: 12, dy: 0)
-                attributes.transform = CGAffineTransform(rotationAngle: 270)
-            }
+//            for attributes in layoutAttributes {
+//                attributes.frame.insetBy(dx: 12, dy: 0)
+//                attributes.transform = CGAffineTransform(rotationAngle: 270)
+//            }
         }
         return layoutAttributes
     }
