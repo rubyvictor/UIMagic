@@ -64,12 +64,14 @@ class InspirationsController: UICollectionViewController  {
         return cell
     }
     
-    
-    
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: view.frame.width, height: 150)
-//    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("123 123")
+        let layout = collectionViewLayout as! UltravisualLayout
+        let offset = layout.dragOffset * CGFloat(indexPath.item)
+        if collectionView.contentOffset.y != offset {
+            collectionView.setContentOffset(CGPoint(x: 0,y: offset), animated: true)
+        }
+    }
     
 }
 
