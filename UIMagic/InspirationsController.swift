@@ -58,6 +58,8 @@ class InspirationsController: UICollectionViewController  {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "inspirationsCell", for: indexPath) as! InspirationsCell
         
         cell.inspirations = inspirations[indexPath.item]
+        
+        cell.updateParallaxOffset(collectionViewBounds: collectionView.bounds)
 //        cell.contentView.backgroundColor = colors[indexPath.item]
 //        cell.imageView.backgroundColor = colors[indexPath.item]
         
@@ -73,6 +75,17 @@ class InspirationsController: UICollectionViewController  {
         }
     }
     
+}
+
+extension InspirationsController {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let cells = collectionView?.visibleCells as! [InspirationsCell]
+        guard let bounds = collectionView?.bounds else { return }
+        for cell in cells {
+            cell.updateParallaxOffset(collectionViewBounds: bounds)
+        }
+    }
 }
 
 

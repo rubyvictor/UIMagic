@@ -18,7 +18,13 @@ class InspirationsCell: UICollectionViewCell {
     @IBOutlet var timeAndRoomLabel: UILabel!
     
     @IBOutlet weak var speakerLabel: UILabel!
+    @IBOutlet weak var imageViewCenterYLayoutConstraint: NSLayoutConstraint!
     
+    var parallaxOffset: CGFloat = 0 {
+        didSet {
+            imageViewCenterYLayoutConstraint.constant = parallaxOffset
+        }
+    }
     
     var inspirations: Inspiration? {
         didSet {
@@ -83,5 +89,13 @@ class InspirationsCell: UICollectionViewCell {
         speakerLabel.alpha = delta
     }
     
+    func updateParallaxOffset(collectionViewBounds bounds: CGRect) {
+        let center = CGPoint(x: bounds.midX, y: bounds.midY)
+        let offsetFromCenter = CGPoint(x: center.x - self.center.x, y: center.y - self.center.y)
+        let maxVerticalOffset = (bounds.height / 2) + (self.bounds.height / 2)
+        let scaleFactor = 10 - maxVerticalOffset
+        parallaxOffset = -offsetFromCenter.y * scaleFactor
+        
+    }
     
 }

@@ -95,6 +95,7 @@
                                 <connections>
                                     <outlet property="imageCoverView" destination="SNg-gR-y6e" id="bRO-Lt-AQF"/>
                                     <outlet property="imageView" destination="Ibw-Ih-5bF" id="OMk-yA-xqC"/>
+                                    <outlet property="imageViewCenterYLayoutConstraint" destination="QPE-Sm-Dek" id="E8f-cF-0Tf"/>
                                     <outlet property="inspirationLabel" destination="00d-Zh-g83" id="cbe-wQ-yz7"/>
                                     <outlet property="speakerLabel" destination="RB8-fp-odw" id="NdK-Rn-wpA"/>
                                     <outlet property="timeAndRoomLabel" destination="KxM-B4-nyA" id="9st-4N-uHV"/>
