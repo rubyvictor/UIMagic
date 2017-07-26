@@ -113,6 +113,12 @@ class UltravisualLayout: UICollectionViewLayout {
         
     }
     
+    // Method to apply timbre layout
+//    func degressToRadians(degrees: Float) -> CGFloat {
+//        return  CGFloat(.pi * (degrees / 180.0))
+//    }
+    
+    
     /* Return all attributes in the cache whose frame intersects with the rect passed to the method */
     
     // This method snaps the featured cell right to the top of the screen without scrolling with too much effort. Also needs to speed up deceleration in View Controller
@@ -128,6 +134,11 @@ class UltravisualLayout: UICollectionViewLayout {
         for attributes in cache {
             if attributes.frame.intersects(rect) {
                 layoutAttributes.append(attributes)
+            }
+            
+            for attributes in layoutAttributes {
+                attributes.frame.insetBy(dx: 12, dy: 0)
+                attributes.transform = CGAffineTransform(rotationAngle: 270)
             }
         }
         return layoutAttributes
